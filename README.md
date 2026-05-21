@@ -71,33 +71,7 @@ Raw Fundus Image
 | Parashar & Agrawal (FAWT)       | 90.76        |
 | **Proposed (Ensemble)**         | **89.43**    |
 
----
 
-## Project Structure
-
-```
-glaucoma-iemd-ensemble/
-│
-├── data/
-│   └── rim_one_r12/          # Place RIM-ONE r12 dataset here
-│
-├── src/
-│   ├── preprocessing.py      # Image resizing, CLAHE, denoising
-│   ├── iemd.py               # IEMD decomposition (Gaussian pyramid)
-│   ├── feature_extraction.py # GLCM, LBP, HOG, Gabor, Entropy
-│   ├── augmentation.py       # Geometric augmentation (4x)
-│   ├── feature_selection.py  # ANOVA + PCA pipeline
-│   └── ensemble.py           # SVM + RF + GBM soft-voting classifier
-│
-├── notebooks/
-│   └── glaucoma_pipeline.ipynb  # End-to-end walkthrough
-│
-├── results/
-│   └── fold_results.csv      # Per-fold accuracy, sensitivity, specificity
-│
-├── requirements.txt
-└── README.md
-```
 
 ---
 
